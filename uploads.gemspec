@@ -7,11 +7,11 @@ require "uploads/version"
 Gem::Specification.new do |s|
   s.name        = "uploads"
   s.version     = Uploads::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Uploads."
-  s.description = "TODO: Description of Uploads."
+  s.authors     = ["Yury Korolev"]
+  s.email       = ["yury.korolev@gmail.com"]
+  s.homepage    = "https://github.com/anjlab/uploads"
+  s.summary     = "Simplified uploads for rails"
+  s.description = "Simplified uploads for rails"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
