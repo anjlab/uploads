@@ -1,0 +1,53 @@
+css:
+  #upload-area {
+    padding:2em;
+  }
+
+  #upload-area h2 {
+    display: none
+  }
+
+  .qq-upload-dragging #upload-area {
+    background:red;
+  }
+
+  .qq-upload-dragging #upload-area h2 {
+    display: block;
+    text-align:center;
+
+  }
+
+  .qq-upload-dragging #upload-button {
+    display: none
+  }
+
+  #upload-button {
+    display:inline-block
+  }
+
+h1 Welcome
+
+div#upload-area data-button='#upload-button' data-dropzones='#upload-area'
+  h2 Drag files here
+  / a#upload-button href='#' upload
+
+javascript:
+  $('#upload-area').uploader({
+    validation: {
+      allowedExtensions: ['png', 'jpg', 'jpeg', 'gif']
+    },
+    callbacks: {
+      onComplete: function(id, fileName, responseJSON) {
+        console.log('complete');
+      },
+      onProgress: function(id, fileName, loaded, total) {
+        console.log('progess');
+      },
+      onUpload: function(id, fileName) {
+        console.log('upload');
+      },
+      onError: function(id, fileName, message) {
+        console.log(message);
+      }
+    }
+  });
