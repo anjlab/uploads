@@ -2,7 +2,8 @@ PATH
   remote: .
   specs:
     uploads (0.0.1)
-      rails (~> 3.2.11)
+      mechanize_clip
+      rails (>= 3.2)
 
 GEM
   remote: http://rubygems.org/
