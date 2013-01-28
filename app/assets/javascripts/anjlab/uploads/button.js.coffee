@@ -43,6 +43,7 @@ class @AnjLab.Uploads.Button
       # the right side of the input
       right: 0
       top: 0
+      height: 'auto' # bootstrap input[file] height workaround
       fontFamily: 'Arial'
       # 4 persons reported this, the max values that worked for them were 243, 236, 236, 118
       fontSize: '118px'
