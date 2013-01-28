@@ -1,3 +1,5 @@
+require 'mechanize_clip'
+
 module Uploads
   def respond_to_upload(request)
     response = {success: false}
