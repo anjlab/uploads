@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    uploads (0.0.1)
+    uploads (0.0.2)
       mechanize_clip
       rails (>= 3.2)
 
