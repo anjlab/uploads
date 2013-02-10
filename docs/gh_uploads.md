@@ -1,4 +1,3 @@
-
 1. Create new rails app
 ```sh
 rails new gh_uploads --skip-bundle
@@ -36,38 +35,36 @@ rm public/index.html
 ```
 
 8. Change your Upload model
-
 ```ruby
-class Upload < ActiveRecord::Base
-  
-  has_attached_file :image,
-    url: "/system/:class/:id/:style-:fingerprint.:extension",
-    default_url: "/assets/:class/:style-missing.jpg",
-    use_timestamp: false
-
-end
+    class Upload < ActiveRecord::Base
+    
+      has_attached_file :image,
+        url: "/system/:class/:id/:style-:fingerprint.:extension",
+        default_url: "/assets/:class/:style-missing.jpg",
+        use_timestamp: false
+    
+    end
 ```
 
 9. Change your uploads_controller.rb
-
 ```ruby
-class UploadsController < ApplicationController
-  include Uploads
-
-  def create
-    @upload = Upload.new
-
-    respond_to_upload(request) do |file, response|
-      # grab uploaded file
-      @upload.image = file
-      # try to save it
-      if response[:success] = @upload.save
-        response[:image_url] = @upload.image.url(:original)
-      else
-        # report errors if any
-        response[:errors] = @upload.errors
+    class UploadsController < ApplicationController
+      include Uploads
+    
+      def create
+        @upload = Upload.new
+    
+        respond_to_upload(request) do |file, response|
+          # grab uploaded file
+          @upload.image = file
+          # try to save it
+          if response[:success] = @upload.save
+            response[:image_url] = @upload.image.url(:original)
+          else
+            # report errors if any
+            response[:errors] = @upload.errors
+          end
+        end
       end
     end
-  end
-end
 ```
