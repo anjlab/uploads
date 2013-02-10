@@ -1,4 +1,9 @@
-# Uploads
+# Uploads - Easy uploads for rails.
+
+1. No predefined CSS and templates.
+2. Support rails CSRF TOKEN.
+3. No middleware, just your controllers.
+4. Use as much as possible jQuery building functions.
 
 ## Installation
 
