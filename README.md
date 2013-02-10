@@ -1,4 +1,4 @@
-= Uploads
+# Uploads
 
 ## Installation
 
@@ -43,5 +43,23 @@ end
   #upload-area data-button='#upload-button' data-multiple='false' data-dropzones='#upload-area'
     a#upload-button Choose a photo
 ```
+
+## In your js
+
+```coffeescript
+  $('#upload-area').uploader
+    request:
+      endpoint: '/user_uploads'
+    validation:
+      allowedExtensions: ['png', 'jpg', 'jpeg', 'gif']
+    callbacks:
+      onComplete: (id, fileName, response) ->
+        console.log('onComplete')
+      onProgress: (id, fileName, loaded, total) ->
+        console.log('onProgress')
+      onUpload: (id, fileName) ->
+        console.log('onUpload')
+      onError: (id, fileName, message) ->
+        console.log('onError')
 
 This project rocks and uses MIT-LICENSE.
