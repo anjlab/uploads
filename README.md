@@ -4,7 +4,8 @@
 2. Support rails CSRF TOKEN.
 3. No middleware, just your controllers.
 4. Use as much as possible jQuery buildin functions.
-5. Based on [file-uploader](https://github.com/valums/file-uploader/)
+5. Works Paperclip and CarrierWave
+6. Based on [file-uploader](https://github.com/valums/file-uploader/)
 
 ## Installation
 
@@ -76,5 +77,9 @@ end
       onError: (id, fileName, message) ->
         console.log('onError')
 ```
+
+## Examples and tutorials
+
+- [Github like issues attachments](docs/gh_uploads.md)
 
 This project rocks and uses MIT-LICENSE.
