@@ -36,6 +36,7 @@ rm public/index.html
 ```
 
 8. Change your Upload model
+
 ```ruby
 class Upload < ActiveRecord::Base
   
@@ -48,6 +49,7 @@ end
 ```
 
 9. Change your uploads_controller.rb
+
 ```ruby
 class UploadsController < ApplicationController
   include Uploads
