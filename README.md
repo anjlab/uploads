@@ -4,6 +4,7 @@
 2. Support rails CSRF TOKEN.
 3. No middleware, just your controllers.
 4. Use as much as possible jQuery buildin functions.
+5. Based on [file-uploader](https://github.com/valums/file-uploader/)
 
 ## Installation
 
@@ -45,11 +46,19 @@ end
 ## In your views
 
 ```slim
-  #upload-area data-button='#upload-button' data-multiple='false' data-dropzones='#upload-area'
+  #upload-area data-button='#upload-button' \
+               data-multiple='false' \
+               data-dropzones='#upload-area'
     a#upload-button Choose a photo
 ```
 
 ## In your js
+
+```coffeescript
+# application.js.coffee
+...
+# require anjlab/uploads
+```
 
 ```coffeescript
   $('#upload-area').uploader
@@ -66,5 +75,6 @@ end
         console.log('onUpload')
       onError: (id, fileName, message) ->
         console.log('onError')
+```
 
 This project rocks and uses MIT-LICENSE.
