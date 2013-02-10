@@ -18,8 +18,7 @@ class @AnjLab.Uploads.Button
 
   # cleans/recreates the file input
   reset: ->
-    if @input.parentNode
-      $(@input).remove()
+    $(@input).remove()
 
     @$element.removeClass(@options.focusClass)
     @input = @createInput()

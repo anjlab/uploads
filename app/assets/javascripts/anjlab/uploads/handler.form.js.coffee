@@ -102,8 +102,7 @@ class @AnjLab.Uploads.UploadHandlerForm extends @AnjLab.Uploads.UploadHandler
     @uuids[id] = utils.getUniqueId()
 
     # remove file input from DOM
-    if fileInput.parentNode
-      $(fileInput).remove()
+    $(fileInput).remove()
 
     id
 
