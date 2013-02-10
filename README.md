@@ -3,7 +3,7 @@
 1. No predefined CSS and templates.
 2. Support rails CSRF TOKEN.
 3. No middleware, just your controllers.
-4. Use as much as possible jQuery building functions.
+4. Use as much as possible jQuery buildin functions.
 
 ## Installation
 
