@@ -80,6 +80,8 @@ end
 
 ## Examples and tutorials
 
+![uploads](https://f.cloud.github.com/assets/5250/523901/814e1f4a-c0ea-11e2-92b8-e50647185e26.gif)
+
 - [Github like issues attachments](docs/gh_uploads.md)
 
 This project rocks and uses MIT-LICENSE.
