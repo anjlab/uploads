@@ -176,7 +176,10 @@ class @AnjLab.Uploads.UploadDropZone
     @$element.on 'dragover', (e) =>
       return if !@isValidFileDrag(e)
             
-      effect = if utils.ie() ? null else e.originalEvent.dataTransfer.effectAllowed
+      if utils.ie()
+        effect = null
+      else
+        effect = e.originalEvent.dataTransfer.effectAllowed
       if effect == 'move' || effect == 'linkMove'
         e.originalEvent.dataTransfer.dropEffect = 'move' # for FF (only move allowed)
       else
